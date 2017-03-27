@@ -39,6 +39,9 @@ module.exports = {
       exclude: /(node_modules)/,
       loaders: ['babel']
     }, {
+      test: /\.json$/,
+      loader: 'json-loader'
+    }, {
       test: /\.html$/,
       loader: 'ngtemplate!html',
       exclude: /(index)/

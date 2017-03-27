@@ -14,6 +14,8 @@ import AppCore from './core';
 import { AppComponent } from './app.component';
 
 import Home from './components/home';
+import ArticleList from './components/articleList';
+import SingleArticle from './components/singleArticle';
 
 const appName = 'myApp';
 
@@ -29,7 +31,9 @@ angular.module(appName, [
   AppCore,
 
   // ui-components
-  Home
+  Home,
+  ArticleList,
+  SingleArticle
 ])
 .config(config)
 .component(AppComponent.selector, AppComponent);

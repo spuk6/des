@@ -1,0 +1,14 @@
+<section class="articleList">
+  <h3>Article List</h3>
+  <div class="row" data-ng-repeat="article in $ctrl.articles">
+    <div class="col-md-3">
+      <img width="90" height="90" data-ng-src="{{article.imageUrl}}"/>
+    </div>
+    <div class="col-md-9">
+      <div>{{article.title}}</div>
+      <div> {{article.text}}</div>
+      <a href="">{{article.comments.length}} comments</a>
+    </div>
+  </div>
+  <button class="btn btn-default" data-ng-click="$ctrl.loadMore()">Load Next</button>
+</section>
