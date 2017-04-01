@@ -1,10 +1,15 @@
 <main>
     <div class="col-md-12">
         <div class="col-md-4">
-            <article-list></article-list>
+            <article-list articles="model.articles"
+                          show-loading="model.showLoading"
+                          add-articles="model.addArticles()"
+                          show-load-button="model.showLoadButton"
+                          selected-article="model.selectedArticle"
+                    ></article-list>
         </div>
         <div class="col-md-8">
-            <single-article></single-article>
+            <div ui-view selected-article="model.selectedArticle"></div>
         </div>
     </div>
 </main>

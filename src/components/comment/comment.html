@@ -1,0 +1,21 @@
+<div class="comment">
+    <div class="col-md-6" >
+        <span>{{model.comment.author}}</span>
+        <span>{{model.comment.createdAt | date : 'd MMM yyyy HH:mm:ss'}}</span>
+    </div>
+    <div class="col-md-6">
+        <button data-ng-click="model.toggleReplies(model.comment.id)">{{model.comment.repliesCount}} replies</button>
+        <button data-ng-click="model.replyForm()">reply</button>
+    </div>
+    <div class="col-md-12" >
+        <span>{{model.comment.text}}</span>
+    </div>
+    <div class="col-md-12" data-ng-if="model.showReplyForm">
+        <textarea placeholder="Reply here ..." data-ng-model="model.replyContent"
+                  ng-keyup="$event.keyCode == 13 && model.submitText()"></textarea>
+    </div>
+    <div class="col-md-12" data-ng-if="model.showReplies" style="padding-left: 20px;">
+        <comment data-ng-repeat="comment in model.replies"
+                 comment="comment"></comment>
+    </div>
+</div>

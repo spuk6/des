@@ -26,3 +26,4 @@ vendors*.js
 templates*.mdl*.js
 dist/
 .tags*
+.idea*

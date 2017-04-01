@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import Home from './components/home';
 import ArticleList from './components/articleList';
 import SingleArticle from './components/singleArticle';
+import Comment from './components/comment';
 
 const appName = 'myApp';
 
@@ -33,7 +34,8 @@ angular.module(appName, [
   // ui-components
   Home,
   ArticleList,
-  SingleArticle
+  SingleArticle,
+  Comment
 ])
 .config(config)
 .component(AppComponent.selector, AppComponent);
@@ -44,10 +46,13 @@ function config ($stateProvider, $urlRouterProvider, localStorageServiceProvider
   localStorageServiceProvider.setPrefix(appName);
 
   $stateProvider
-    .state('home', {
-      url: '/',
-      component: 'home'
-    });
+      .state('home', {
+        url: '/',
+        component: 'home'
+      }).state('home.article', {
+        url: 'article/:articleId',
+        component: 'singleArticle'
+      });
 
   $urlRouterProvider.otherwise('/');
 }

@@ -1,6 +1,7 @@
-<section class="articleList">
+<section class="articleList" >
     <h3>{{model.componentTitle}}</h3>
-    <div class="row" data-ng-repeat="article in model.articles" >
+    <div class="row" data-ng-repeat="article in model.articles" ng-click="model.openArticle(article);"
+         data-ng-class="article.id == model.selectedArticle.id ? 'selected' : ''">
         <div class="col-md-3">
             <img width="90" height="90" data-ng-src="{{article.imageUrl}}"/>
         </div>
@@ -11,5 +12,5 @@
         </div>
     </div>
     <img src="../../assets/icon-128x128.png" data-ng-show="model.showLoading" />
-    <button class="btn btn-default" data-ng-if="model.showLoadButton" data-ng-click="model.addArticles()">Load Next</button>
+    <button class="btn btn-default" data-ng-if="model.showLoadButton" data-ng-click="model.loadMore()">Load Next</button>
 </section>

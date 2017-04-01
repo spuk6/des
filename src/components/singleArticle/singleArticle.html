@@ -1,5 +1,13 @@
 <section class="articleList">
-  <h3>Single article</h3>
-
-
+    <div class="col-md-12 imageContainer landscape">
+        <img  data-ng-src="{{model.selectedArticle.imageUrl}}"/>
+    </div>
+    <div class="col-md-12">
+        {{model.selectedArticle.text}}
+    </div>
+    <div class="col-md-12">
+        <textarea placeholder="Comment here ..." data-ng-model="model.newComment"></textarea>
+        <comment data-ng-repeat="comment in model.comments"
+                 comment="comment"></comment>
+    </div>
 </section>
