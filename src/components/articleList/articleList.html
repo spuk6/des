@@ -1,16 +1,20 @@
-<section class="articleList" >
+<section class="article-list" >
     <h3>{{model.componentTitle}}</h3>
-    <div class="row" data-ng-repeat="article in model.articles" ng-click="model.openArticle(article);"
+    <div class="row article-item" data-ng-repeat="article in model.articles" ng-click="model.openArticle(article);"
          data-ng-class="article.id == model.selectedArticle.id ? 'selected' : ''">
-        <div class="col-md-3">
-            <img width="90" height="90" data-ng-src="{{article.imageUrl}}"/>
+        <div class="col-md-4 thumb1">
+            <div class="img" style="background-image:url('{{article.imageUrl}}')"></div>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-8 article-content">
             <h5>{{article.title}}</h5>
-            <div>{{article.text}}</div>
-            <a href="">{{article.commentsCount}} comments</a>
+            <div class="article-desc">{{article.text}}</div>
+            <div class="article-comments">
+                <a href="">{{article.commentsCount}} comments</a>
+            </div>
         </div>
     </div>
-    <img src="../../assets/icon-128x128.png" data-ng-show="model.showLoading" />
-    <button class="btn btn-default" data-ng-if="model.showLoadButton" data-ng-click="model.loadMore()">Load Next</button>
+    <div class="load-more-div">
+        <button class="btn btn-default load-more-btn" data-ng-if="model.showLoadButton" data-ng-click="model.loadMore()">Load Next</button>
+        <img class="loading" src="../../assets/loading.gif" data-ng-show="model.showLoading" />
+    </div>
 </section>

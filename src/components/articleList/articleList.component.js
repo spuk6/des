@@ -18,7 +18,7 @@ export let ArticleListComponent = {
     constructor($scope, $state)
     {
         var model = this;
-        model.componentTitle = "Article list";
+        model.componentTitle = "Articles list";
         model.openArticle = function (article) {
             model.selectedArticle = article;
             $state.go("home.article", {
