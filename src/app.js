@@ -7,6 +7,7 @@ import AngularUiRouter from 'angular-ui-router';
 import AngularAnimate from 'angular-animate';
 import AngularSanitize from 'angular-sanitize';
 import AngularBootstrap from 'angular-ui-bootstrap';
+import AngularMoment from 'angular-moment';
 /*eslint-disable */
 import LocalStorageModule from 'angular-local-storage';
 /*eslint-enable */
@@ -21,24 +22,25 @@ import Comment from './components/comment';
 const appName = 'myApp';
 
 angular.module(appName, [
-  // framework wide components
-  AngularUiRouter,
-  AngularAnimate,
-  AngularSanitize,
-  AngularBootstrap,
+    // framework wide components
+    AngularUiRouter,
+    AngularAnimate,
+    AngularSanitize,
+    AngularBootstrap,
+    AngularMoment,
 
-  // services
-  'LocalStorageModule',
-  AppCore,
+    // services
+    'LocalStorageModule',
+    AppCore,
 
-  // ui-components
-  Home,
-  ArticleList,
-  SingleArticle,
-  Comment
+    // ui-components
+    Home,
+    ArticleList,
+    SingleArticle,
+    Comment
 ])
-.config(config)
-.component(AppComponent.selector, AppComponent);
+    .config(config)
+    .component(AppComponent.selector, AppComponent);
 
 /* @ngInject */
 function config ($stateProvider, $urlRouterProvider, localStorageServiceProvider) {

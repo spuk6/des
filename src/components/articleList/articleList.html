@@ -1,13 +1,13 @@
 <section class="article-list" >
-    <h3>{{model.componentTitle}}</h3>
+    <h3>Articles list</h3>
     <div class="row article-item" data-ng-repeat="article in model.articles" ng-click="model.openArticle(article);"
          data-ng-class="article.id == model.selectedArticle.id ? 'selected' : ''">
-        <div class="col-md-4 thumb1">
+        <div class="col-md-4 col-sm-6 hidden-xs thumb1">
             <div class="img" style="background-image:url('{{article.imageUrl}}')"></div>
         </div>
-        <div class="col-md-8 article-content">
+        <div class="col-md-8 col-sm-6 article-content">
             <h5>{{article.title}}</h5>
-            <div class="article-desc">{{article.text}}</div>
+            <div class="article-desc hidden-sm hidden-xs">{{article.text}}</div>
             <div class="article-comments">
                 <a href="">{{article.commentsCount}} comments</a>
             </div>
@@ -15,6 +15,6 @@
     </div>
     <div class="load-more-div">
         <button class="btn btn-default load-more-btn" data-ng-if="model.showLoadButton" data-ng-click="model.loadMore()">Load Next</button>
-        <img class="loading" src="../../assets/loading.gif" data-ng-show="model.showLoading" />
+        <img class="loading" src="/assets/loading.gif" data-ng-show="model.showLoading" />
     </div>
 </section>

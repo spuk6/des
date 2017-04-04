@@ -1,21 +1,34 @@
-<div class="comment">
-    <div class="col-md-6" >
-        <span>{{model.comment.author}}</span>
-        <span>{{model.comment.createdAt | date : 'd MMM yyyy HH:mm:ss'}}</span>
+<div class="comment row">
+    <div class="col-sm-6" >
+        <span class="author-name">{{model.comment.author}}</span>
+        <span class="time-ago" am-time-ago="model.comment.unixDate | amFromUnix"></span>
     </div>
-    <div class="col-md-6">
-        <button data-ng-click="model.toggleReplies(model.comment.id)">{{model.comment.repliesCount}} replies</button>
-        <button data-ng-click="model.replyForm()">reply</button>
+    <div class="col-sm-6">
+        <a class="col-xs-6" href=""
+           data-ng-click="model.toggleReplies()"
+           data-ng-class="model.comment.repliesCount == 0 ? 'disabled':''">
+            <span data-ng-if="!model.showReplies">{{model.comment.repliesCount}} {{model.comment.repliesCount == 1 ? 'reply' : 'replies'}}</span>
+            <span data-ng-if="model.showReplies">hide replies</span>
+        </a>
+        <a class="col-xs-6" href="" data-ng-click="model.toggleReplyForm()">
+            <span data-ng-if="!model.showReplyForm">reply</span>
+            <span data-ng-if="model.showReplyForm">discard reply</span>
+        </a>
     </div>
-    <div class="col-md-12" >
+    <div class="col-sm-12" >
         <span>{{model.comment.text}}</span>
     </div>
-    <div class="col-md-12" data-ng-if="model.showReplyForm">
-        <textarea placeholder="Reply here ..." data-ng-model="model.replyContent"
-                  ng-keyup="$event.keyCode == 13 && model.submitText()"></textarea>
+    <div class="col-sm-12" data-ng-if="model.showReplyForm">
+        <textarea class="comment-box" placeholder="Reply here ..." data-ng-model="model.replyContent"
+                  ng-keyup="$event.keyCode == 13 && model.submitReply()"></textarea>
+        <span class="comment-info pull-right">press Enter to submit</span>
     </div>
-    <div class="col-md-12" data-ng-if="model.showReplies" style="padding-left: 20px;">
+    <div class="col-sm-12 replies" data-ng-if="model.showReplies">
         <comment data-ng-repeat="comment in model.replies"
-                 comment="comment"></comment>
+                 comment="comment"
+                 comments-count="model.commentsCount"></comment>
+    </div>
+    <div class="col-sm-12">
+        <img class="loading" src="/assets/loading.gif" data-ng-show="model.loading" />
     </div>
 </div>

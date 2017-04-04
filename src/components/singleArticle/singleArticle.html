@@ -1,13 +1,31 @@
-<section class="articleList">
-    <div class="col-md-12 imageContainer landscape">
-        <img  data-ng-src="{{model.selectedArticle.imageUrl}}"/>
+<section>
+    <div data-ng-if="model.selectedArticle.createdAt">
+        <div class="col-md-12">
+            <h3>{{model.selectedArticle.title}}</h3>
+        </div>
+        <div class="col-md-12 image-container landscape">
+            <img class="article-image" data-ng-src="{{model.selectedArticle.imageUrl}}"/>
+        </div>
+        <div class="col-md-12 article-description">
+            {{model.selectedArticle.text}}
+        </div>
+        <div class="col-md-12">
+            <h5>Comments</h5>
+            <textarea class="comment-box" class="" placeholder="Enter comment here ..."
+                      data-ng-model="model.newCommentContent"
+                      ng-keyup="$event.keyCode == 13 && model.submitComment()"></textarea>
+            <span class="comment-info pull-right">press Enter to submit</span>
+        </div>
+        <div class="col-sm-12">
+            <img class="loading" src="/assets/loading.gif" data-ng-show="model.loadingComments"/>
+        </div>
+        <div class="col-md-12 row">
+            <comment data-ng-repeat="comment in model.comments"
+                     comment="comment" comments-count="model.selectedArticle.commentsCount"></comment>
+        </div>
     </div>
-    <div class="col-md-12">
-        {{model.selectedArticle.text}}
-    </div>
-    <div class="col-md-12">
-        <textarea placeholder="Comment here ..." data-ng-model="model.newComment"></textarea>
-        <comment data-ng-repeat="comment in model.comments"
-                 comment="comment"></comment>
+    <div class="loading-article" data-ng-if="!model.selectedArticle.createdAt">
+        <img class="loading" src="/assets/loading.gif" data-ng-show="!model.selectedArticle.id"/>
     </div>
 </section>
+

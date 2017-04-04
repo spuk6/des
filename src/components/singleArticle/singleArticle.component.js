@@ -7,7 +7,6 @@ export let SingleArticleComponent = {
     bindings: {
         selectedArticle: '='
     },
-    transclude: true,
     controllerAs: "model",
     controller: class singleArticleCtrl
 {
@@ -15,21 +14,59 @@ export let SingleArticleComponent = {
     {
         var model = this;
         model.comments = [];
+        
         $scope.$watch('model.selectedArticle', function (newArticle) {
-            if (newArticle.createdAt) {
+            if (newArticle && newArticle.createdAt && newArticle.commentsCount > 0) {
                 loadComments(newArticle.id);
             }
         });
-        //$scope.$watch('model.comments', function (newArticle) {
-        //    console.log(newArticle);
-        //});
+
         var loadComments = function (articleId) {
+            model.loadingComments = true;
             FakeApi.loadComments({articleId: articleId}).then(function (result) {
                 model.comments = model.comments.concat(result.data);
-                console.log(result.data);
+                model.loadingComments = false;
                 $scope.$applyAsync();
             });
-        }
+        };
+
+        model.submitComment = function() {
+            // trim the comment and check if it has length
+            model.newCommentContent = model.newCommentContent.trim();
+            if(model.newCommentContent.length > 0){
+
+                model.loadingComments = true;
+                var addCommentParams = {
+                    articleId: model.selectedArticle.id,
+                    text: angular.copy(model.newCommentContent)
+                };
+
+                model.newCommentContent = '';
+                FakeApi.addComment(addCommentParams).then(function(result) {
+                    //Set comment date
+                    var newComment = result.data;
+                    var dt = new Date();
+                    newComment.createdAt = dt.getTime();
+
+                    // Add number to new comment replies
+                    newComment.repliesCount = 0;
+
+                    // push the new comment to the current array
+                    model.comments = model.comments.concat(newComment);
+
+                    // clear comment form model
+                    model.newCommentContent = '';
+
+                    // increment current article comments
+                    model.selectedArticle.commentsCount++;
+
+                    // stop loading
+                    model.loadingComments = false;
+
+                    $scope.$applyAsync();
+                });
+            }
+        };
     }
 }
 }

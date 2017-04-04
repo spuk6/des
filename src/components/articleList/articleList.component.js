@@ -8,30 +8,33 @@ export let ArticleListComponent = {
         articles: '=',
         showLoading: '<',
         showLoadButton: '<',
-        addArticles: '&',
+        loadArticles: '&',
         selectedArticle: '='
     },
-    transclude: true,
     controllerAs: "model",
-    controller: class articleListCtrl
-{
-    constructor($scope, $state)
-    {
-        var model = this;
-        model.componentTitle = "Articles list";
-        model.openArticle = function (article) {
-            model.selectedArticle = article;
-            $state.go("home.article", {
-                articleId: article.id
-            });
-        };
+    controller: class articleListCtrl {
+        constructor($scope, $state, $location, $anchorScroll) {
+            var model = this;
+            model.openArticle = function (article) {
+                model.selectedArticle = article;
 
-        model.loadMore = function() {
-            model.addArticles();
+                // include article id in the url
+                $state.go("home.article", {
+                    articleId: article.id
+                });
+
+                // go to top, so you will see selected article
+                $location.hash('article-content');
+                $anchorScroll();
+            };
+
+            // trigger parent function loadArticles()
+            model.loadMore = function() {
+                model.loadArticles();
+            }
+
         }
-
     }
-}
 }
 ;
 
