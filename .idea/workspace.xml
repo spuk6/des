@@ -5,47 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b21612f-23a6-4b0e-bbb5-a930df63c485" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Task/Assignment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Task/Wireframe.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Task/fakeApi.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Task/fakeApi/data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Task/fakeApi/db.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Task/fakeApi/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Task/fakeApi/seed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon-128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/articleList/articleList.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/comment/comment.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/singleArticle/singleArticle.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/core/components/e-dropdown/e-dropdown.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/core/components/e-dropdown/e-dropdown.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/core/components/e-dropdown/e-dropdown.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/core/components/e-dropdown/e-dropdown.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/core/components/e-dropdown/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/core/services/some.service.srv.spec.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/articleList/articleList.component.js" afterPath="$PROJECT_DIR$/src/components/articleList/articleList.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/articleList/articleList.html" afterPath="$PROJECT_DIR$/src/components/articleList/articleList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/articleList/articleList.less" afterPath="$PROJECT_DIR$/src/components/articleList/articleList.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/articleList/articleList.spec.js" afterPath="$PROJECT_DIR$/src/components/articleList/articleList.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/articleList/index.js" afterPath="$PROJECT_DIR$/src/components/articleList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comment/comment.component.js" afterPath="$PROJECT_DIR$/src/components/comment/comment.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comment/comment.html" afterPath="$PROJECT_DIR$/src/components/comment/comment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comment/comment.less" afterPath="$PROJECT_DIR$/src/components/comment/comment.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comment/comment.spec.js" afterPath="$PROJECT_DIR$/src/components/comment/comment.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comment/index.js" afterPath="$PROJECT_DIR$/src/components/comment/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/home.component.js" afterPath="$PROJECT_DIR$/src/components/home/home.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/home.html" afterPath="$PROJECT_DIR$/src/components/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/home.less" afterPath="$PROJECT_DIR$/src/components/home/home.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/index.js" afterPath="$PROJECT_DIR$/src/components/home/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/singleArticle/singleArticle.component.js" afterPath="$PROJECT_DIR$/src/components/singleArticle/singleArticle.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/singleArticle/singleArticle.html" afterPath="$PROJECT_DIR$/src/components/singleArticle/singleArticle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/singleArticle/singleArticle.less" afterPath="$PROJECT_DIR$/src/components/singleArticle/singleArticle.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/singleArticle/singleArticle.spec.js" afterPath="$PROJECT_DIR$/src/components/singleArticle/singleArticle.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/components/index.js" afterPath="$PROJECT_DIR$/src/core/components/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/echoes-variables.less" afterPath="$PROJECT_DIR$/src/css/echoes-variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/home.spec.js" afterPath="$PROJECT_DIR$/src/components/home/home.spec.js" />
     </list>
     <ignored path="despark.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -131,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.component.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.component.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/home/home.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+            <state relative-caret-position="300">
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -153,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.spec.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.spec.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/home/home.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -438,6 +398,7 @@
         <option value="$PROJECT_DIR$/src/components/singleArticle/singleArticle.spec.js" />
         <option value="$PROJECT_DIR$/src/components/home/home.component.js" />
         <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/components/home/home.spec.js" />
       </list>
     </option>
   </component>
@@ -562,50 +523,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="despark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="despark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="comment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="despark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="despark" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articleList" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -698,12 +615,12 @@
       <updated>1490282643994</updated>
       <workItem from="1490282645318" duration="9156000" />
       <workItem from="1490630098050" duration="24650000" />
-      <workItem from="1491201893035" duration="37445000" />
+      <workItem from="1491201893035" duration="39728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71251000" />
+    <option name="totallyTimeSpent" value="73534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-120" width="1920" height="1200" extended-state="0" />
@@ -1085,14 +1002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/home/home.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/singleArticle/singleArticle.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1148,11 +1057,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home/home.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+        <state relative-caret-position="300">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/home/home.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

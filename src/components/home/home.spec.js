@@ -14,9 +14,4 @@ describe('Home Component', () => {
     });
   }));
 
-  it('should have a title', () => {
-    const expected = 'SuperNova';
-    const actual = ctrl.title;
-    expect(actual).toMatch(expected);
-  });
 });
